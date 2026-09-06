@@ -1,0 +1,853 @@
+{
+  "source": {
+    "citation": "U.S. Social Security Administration, Office of the Chief Actuary, Actuarial Life Table (period life table), 2023 data. Death probability is the probability of dying within one year; life expectancy is the average remaining years at that exact age.",
+    "url": "https://www.ssa.gov/oact/STATS/table4c6.html",
+    "year": 2023,
+    "confidence": "high"
+  },
+  "retrievedFrom": "https://web.archive.org/web/20260904121030/https://www.ssa.gov/oact/STATS/table4c6.html",
+  "retrievedOn": "2026-09-06",
+  "note": "ssa.gov returns HTTP 403 to non-browser clients; this table was retrieved from the Internet Archive snapshot of the same page. Values are unmodified.",
+  "rows": [
+    {
+      "age": 0,
+      "maleQx": 0.006015,
+      "maleEx": 75.79,
+      "femaleQx": 0.005125,
+      "femaleEx": 81.06
+    },
+    {
+      "age": 1,
+      "maleQx": 0.000479,
+      "maleEx": 75.25,
+      "femaleQx": 0.000392,
+      "femaleEx": 80.48
+    },
+    {
+      "age": 2,
+      "maleQx": 0.00032,
+      "maleEx": 74.28,
+      "femaleQx": 0.000229,
+      "femaleEx": 79.51
+    },
+    {
+      "age": 3,
+      "maleQx": 0.000249,
+      "maleEx": 73.31,
+      "femaleQx": 0.000188,
+      "femaleEx": 78.53
+    },
+    {
+      "age": 4,
+      "maleQx": 0.000194,
+      "maleEx": 72.33,
+      "femaleQx": 0.000155,
+      "femaleEx": 77.54
+    },
+    {
+      "age": 5,
+      "maleQx": 0.000159,
+      "maleEx": 71.34,
+      "femaleQx": 0.000133,
+      "femaleEx": 76.55
+    },
+    {
+      "age": 6,
+      "maleQx": 0.000137,
+      "maleEx": 70.35,
+      "femaleQx": 0.000115,
+      "femaleEx": 75.56
+    },
+    {
+      "age": 7,
+      "maleQx": 0.000125,
+      "maleEx": 69.36,
+      "femaleQx": 0.000105,
+      "femaleEx": 74.57
+    },
+    {
+      "age": 8,
+      "maleQx": 0.00012,
+      "maleEx": 68.37,
+      "femaleQx": 0.0001,
+      "femaleEx": 73.58
+    },
+    {
+      "age": 9,
+      "maleQx": 0.00012,
+      "maleEx": 67.38,
+      "femaleQx": 0.000098,
+      "femaleEx": 72.59
+    },
+    {
+      "age": 10,
+      "maleQx": 0.000125,
+      "maleEx": 66.39,
+      "femaleQx": 0.000101,
+      "femaleEx": 71.59
+    },
+    {
+      "age": 11,
+      "maleQx": 0.00014,
+      "maleEx": 65.39,
+      "femaleQx": 0.000111,
+      "femaleEx": 70.6
+    },
+    {
+      "age": 12,
+      "maleQx": 0.000173,
+      "maleEx": 64.4,
+      "femaleQx": 0.000126,
+      "femaleEx": 69.61
+    },
+    {
+      "age": 13,
+      "maleQx": 0.000233,
+      "maleEx": 63.41,
+      "femaleQx": 0.000152,
+      "femaleEx": 68.62
+    },
+    {
+      "age": 14,
+      "maleQx": 0.000327,
+      "maleEx": 62.43,
+      "femaleQx": 0.000188,
+      "femaleEx": 67.63
+    },
+    {
+      "age": 15,
+      "maleQx": 0.000463,
+      "maleEx": 61.45,
+      "femaleQx": 0.000229,
+      "femaleEx": 66.64
+    },
+    {
+      "age": 16,
+      "maleQx": 0.000634,
+      "maleEx": 60.48,
+      "femaleQx": 0.000273,
+      "femaleEx": 65.66
+    },
+    {
+      "age": 17,
+      "maleQx": 0.000819,
+      "maleEx": 59.51,
+      "femaleQx": 0.000323,
+      "femaleEx": 64.67
+    },
+    {
+      "age": 18,
+      "maleQx": 0.000999,
+      "maleEx": 58.56,
+      "femaleQx": 0.000372,
+      "femaleEx": 63.69
+    },
+    {
+      "age": 19,
+      "maleQx": 0.001138,
+      "maleEx": 57.62,
+      "femaleQx": 0.00041,
+      "femaleEx": 62.72
+    },
+    {
+      "age": 20,
+      "maleQx": 0.001235,
+      "maleEx": 56.69,
+      "femaleQx": 0.000441,
+      "femaleEx": 61.74
+    },
+    {
+      "age": 21,
+      "maleQx": 0.001315,
+      "maleEx": 55.76,
+      "femaleQx": 0.000476,
+      "femaleEx": 60.77
+    },
+    {
+      "age": 22,
+      "maleQx": 0.001378,
+      "maleEx": 54.83,
+      "femaleQx": 0.000513,
+      "femaleEx": 59.8
+    },
+    {
+      "age": 23,
+      "maleQx": 0.001439,
+      "maleEx": 53.9,
+      "femaleQx": 0.000546,
+      "femaleEx": 58.83
+    },
+    {
+      "age": 24,
+      "maleQx": 0.001509,
+      "maleEx": 52.98,
+      "femaleQx": 0.000582,
+      "femaleEx": 57.86
+    },
+    {
+      "age": 25,
+      "maleQx": 0.001595,
+      "maleEx": 52.06,
+      "femaleQx": 0.000609,
+      "femaleEx": 56.9
+    },
+    {
+      "age": 26,
+      "maleQx": 0.001685,
+      "maleEx": 51.14,
+      "femaleQx": 0.000641,
+      "femaleEx": 55.93
+    },
+    {
+      "age": 27,
+      "maleQx": 0.001783,
+      "maleEx": 50.23,
+      "femaleQx": 0.000683,
+      "femaleEx": 54.97
+    },
+    {
+      "age": 28,
+      "maleQx": 0.001876,
+      "maleEx": 49.32,
+      "femaleQx": 0.00074,
+      "femaleEx": 54
+    },
+    {
+      "age": 29,
+      "maleQx": 0.00197,
+      "maleEx": 48.41,
+      "femaleQx": 0.000808,
+      "femaleEx": 53.04
+    },
+    {
+      "age": 30,
+      "maleQx": 0.002085,
+      "maleEx": 47.5,
+      "femaleQx": 0.000878,
+      "femaleEx": 52.08
+    },
+    {
+      "age": 31,
+      "maleQx": 0.002202,
+      "maleEx": 46.6,
+      "femaleQx": 0.000947,
+      "femaleEx": 51.13
+    },
+    {
+      "age": 32,
+      "maleQx": 0.002308,
+      "maleEx": 45.7,
+      "femaleQx": 0.001018,
+      "femaleEx": 50.18
+    },
+    {
+      "age": 33,
+      "maleQx": 0.002407,
+      "maleEx": 44.81,
+      "femaleQx": 0.001089,
+      "femaleEx": 49.23
+    },
+    {
+      "age": 34,
+      "maleQx": 0.00249,
+      "maleEx": 43.91,
+      "femaleQx": 0.001154,
+      "femaleEx": 48.28
+    },
+    {
+      "age": 35,
+      "maleQx": 0.002577,
+      "maleEx": 43.02,
+      "femaleQx": 0.001209,
+      "femaleEx": 47.34
+    },
+    {
+      "age": 36,
+      "maleQx": 0.002665,
+      "maleEx": 42.13,
+      "femaleQx": 0.001263,
+      "femaleEx": 46.39
+    },
+    {
+      "age": 37,
+      "maleQx": 0.002764,
+      "maleEx": 41.24,
+      "femaleQx": 0.001347,
+      "femaleEx": 45.45
+    },
+    {
+      "age": 38,
+      "maleQx": 0.002864,
+      "maleEx": 40.36,
+      "femaleQx": 0.001438,
+      "femaleEx": 44.51
+    },
+    {
+      "age": 39,
+      "maleQx": 0.002987,
+      "maleEx": 39.47,
+      "femaleQx": 0.001533,
+      "femaleEx": 43.58
+    },
+    {
+      "age": 40,
+      "maleQx": 0.003115,
+      "maleEx": 38.59,
+      "femaleQx": 0.001643,
+      "femaleEx": 42.64
+    },
+    {
+      "age": 41,
+      "maleQx": 0.003253,
+      "maleEx": 37.71,
+      "femaleQx": 0.001742,
+      "femaleEx": 41.71
+    },
+    {
+      "age": 42,
+      "maleQx": 0.003419,
+      "maleEx": 36.83,
+      "femaleQx": 0.001845,
+      "femaleEx": 40.78
+    },
+    {
+      "age": 43,
+      "maleQx": 0.0036,
+      "maleEx": 35.95,
+      "femaleQx": 0.001954,
+      "femaleEx": 39.86
+    },
+    {
+      "age": 44,
+      "maleQx": 0.003777,
+      "maleEx": 35.08,
+      "femaleQx": 0.002075,
+      "femaleEx": 38.93
+    },
+    {
+      "age": 45,
+      "maleQx": 0.003931,
+      "maleEx": 34.21,
+      "femaleQx": 0.002187,
+      "femaleEx": 38.01
+    },
+    {
+      "age": 46,
+      "maleQx": 0.004073,
+      "maleEx": 33.34,
+      "femaleQx": 0.002306,
+      "femaleEx": 37.1
+    },
+    {
+      "age": 47,
+      "maleQx": 0.004245,
+      "maleEx": 32.48,
+      "femaleQx": 0.002438,
+      "femaleEx": 36.18
+    },
+    {
+      "age": 48,
+      "maleQx": 0.004477,
+      "maleEx": 31.62,
+      "femaleQx": 0.002595,
+      "femaleEx": 35.27
+    },
+    {
+      "age": 49,
+      "maleQx": 0.004795,
+      "maleEx": 30.76,
+      "femaleQx": 0.002791,
+      "femaleEx": 34.36
+    },
+    {
+      "age": 50,
+      "maleQx": 0.005126,
+      "maleEx": 29.9,
+      "femaleQx": 0.00303,
+      "femaleEx": 33.45
+    },
+    {
+      "age": 51,
+      "maleQx": 0.005496,
+      "maleEx": 29.05,
+      "femaleQx": 0.003288,
+      "femaleEx": 32.55
+    },
+    {
+      "age": 52,
+      "maleQx": 0.005917,
+      "maleEx": 28.21,
+      "femaleQx": 0.003554,
+      "femaleEx": 31.66
+    },
+    {
+      "age": 53,
+      "maleQx": 0.006404,
+      "maleEx": 27.38,
+      "femaleQx": 0.003847,
+      "femaleEx": 30.77
+    },
+    {
+      "age": 54,
+      "maleQx": 0.006923,
+      "maleEx": 26.55,
+      "femaleQx": 0.004172,
+      "femaleEx": 29.89
+    },
+    {
+      "age": 55,
+      "maleQx": 0.007491,
+      "maleEx": 25.73,
+      "femaleQx": 0.004532,
+      "femaleEx": 29.01
+    },
+    {
+      "age": 56,
+      "maleQx": 0.008173,
+      "maleEx": 24.92,
+      "femaleQx": 0.004923,
+      "femaleEx": 28.14
+    },
+    {
+      "age": 57,
+      "maleQx": 0.008938,
+      "maleEx": 24.12,
+      "femaleQx": 0.005365,
+      "femaleEx": 27.28
+    },
+    {
+      "age": 58,
+      "maleQx": 0.009714,
+      "maleEx": 23.34,
+      "femaleQx": 0.005815,
+      "femaleEx": 26.42
+    },
+    {
+      "age": 59,
+      "maleQx": 0.010494,
+      "maleEx": 22.56,
+      "femaleQx": 0.006333,
+      "femaleEx": 25.57
+    },
+    {
+      "age": 60,
+      "maleQx": 0.011337,
+      "maleEx": 21.79,
+      "femaleQx": 0.006923,
+      "femaleEx": 24.73
+    },
+    {
+      "age": 61,
+      "maleQx": 0.012232,
+      "maleEx": 21.04,
+      "femaleQx": 0.007555,
+      "femaleEx": 23.9
+    },
+    {
+      "age": 62,
+      "maleQx": 0.013196,
+      "maleEx": 20.29,
+      "femaleQx": 0.00822,
+      "femaleEx": 23.08
+    },
+    {
+      "age": 63,
+      "maleQx": 0.014229,
+      "maleEx": 19.56,
+      "femaleQx": 0.008881,
+      "femaleEx": 22.27
+    },
+    {
+      "age": 64,
+      "maleQx": 0.015316,
+      "maleEx": 18.83,
+      "femaleQx": 0.009514,
+      "femaleEx": 21.46
+    },
+    {
+      "age": 65,
+      "maleQx": 0.016455,
+      "maleEx": 18.12,
+      "femaleQx": 0.010188,
+      "femaleEx": 20.66
+    },
+    {
+      "age": 66,
+      "maleQx": 0.017574,
+      "maleEx": 17.41,
+      "femaleQx": 0.01088,
+      "femaleEx": 19.87
+    },
+    {
+      "age": 67,
+      "maleQx": 0.018735,
+      "maleEx": 16.71,
+      "femaleQx": 0.011659,
+      "femaleEx": 19.08
+    },
+    {
+      "age": 68,
+      "maleQx": 0.019981,
+      "maleEx": 16.02,
+      "femaleQx": 0.012543,
+      "femaleEx": 18.3
+    },
+    {
+      "age": 69,
+      "maleQx": 0.021366,
+      "maleEx": 15.34,
+      "femaleQx": 0.013581,
+      "femaleEx": 17.53
+    },
+    {
+      "age": 70,
+      "maleQx": 0.022903,
+      "maleEx": 14.66,
+      "femaleQx": 0.014769,
+      "femaleEx": 16.76
+    },
+    {
+      "age": 71,
+      "maleQx": 0.024615,
+      "maleEx": 14,
+      "femaleQx": 0.016153,
+      "femaleEx": 16.01
+    },
+    {
+      "age": 72,
+      "maleQx": 0.026504,
+      "maleEx": 13.34,
+      "femaleQx": 0.017705,
+      "femaleEx": 15.26
+    },
+    {
+      "age": 73,
+      "maleQx": 0.028648,
+      "maleEx": 12.69,
+      "femaleQx": 0.019495,
+      "femaleEx": 14.53
+    },
+    {
+      "age": 74,
+      "maleQx": 0.031071,
+      "maleEx": 12.05,
+      "femaleQx": 0.021533,
+      "femaleEx": 13.81
+    },
+    {
+      "age": 75,
+      "maleQx": 0.033802,
+      "maleEx": 11.42,
+      "femaleQx": 0.023846,
+      "femaleEx": 13.1
+    },
+    {
+      "age": 76,
+      "maleQx": 0.03701,
+      "maleEx": 10.8,
+      "femaleQx": 0.026458,
+      "femaleEx": 12.41
+    },
+    {
+      "age": 77,
+      "maleQx": 0.041158,
+      "maleEx": 10.19,
+      "femaleQx": 0.0297,
+      "femaleEx": 11.73
+    },
+    {
+      "age": 78,
+      "maleQx": 0.045461,
+      "maleEx": 9.61,
+      "femaleQx": 0.033135,
+      "femaleEx": 11.08
+    },
+    {
+      "age": 79,
+      "maleQx": 0.050346,
+      "maleEx": 9.04,
+      "femaleQx": 0.036982,
+      "femaleEx": 10.44
+    },
+    {
+      "age": 80,
+      "maleQx": 0.055633,
+      "maleEx": 8.5,
+      "femaleQx": 0.041183,
+      "femaleEx": 9.82
+    },
+    {
+      "age": 81,
+      "maleQx": 0.061757,
+      "maleEx": 7.97,
+      "femaleQx": 0.045959,
+      "femaleEx": 9.22
+    },
+    {
+      "age": 82,
+      "maleQx": 0.068358,
+      "maleEx": 7.46,
+      "femaleQx": 0.051282,
+      "femaleEx": 8.64
+    },
+    {
+      "age": 83,
+      "maleQx": 0.07542,
+      "maleEx": 6.97,
+      "femaleQx": 0.057262,
+      "femaleEx": 8.08
+    },
+    {
+      "age": 84,
+      "maleQx": 0.083364,
+      "maleEx": 6.5,
+      "femaleQx": 0.064107,
+      "femaleEx": 7.54
+    },
+    {
+      "age": 85,
+      "maleQx": 0.09268,
+      "maleEx": 6.04,
+      "femaleQx": 0.071752,
+      "femaleEx": 7.02
+    },
+    {
+      "age": 86,
+      "maleQx": 0.103459,
+      "maleEx": 5.61,
+      "femaleQx": 0.08049,
+      "femaleEx": 6.53
+    },
+    {
+      "age": 87,
+      "maleQx": 0.115502,
+      "maleEx": 5.2,
+      "femaleQx": 0.090566,
+      "femaleEx": 6.05
+    },
+    {
+      "age": 88,
+      "maleQx": 0.129018,
+      "maleEx": 4.81,
+      "femaleQx": 0.102204,
+      "femaleEx": 5.61
+    },
+    {
+      "age": 89,
+      "maleQx": 0.14381,
+      "maleEx": 4.45,
+      "femaleQx": 0.115178,
+      "femaleEx": 5.19
+    },
+    {
+      "age": 90,
+      "maleQx": 0.159458,
+      "maleEx": 4.11,
+      "femaleQx": 0.129176,
+      "femaleEx": 4.8
+    },
+    {
+      "age": 91,
+      "maleQx": 0.176551,
+      "maleEx": 3.8,
+      "femaleQx": 0.144229,
+      "femaleEx": 4.44
+    },
+    {
+      "age": 92,
+      "maleQx": 0.19536,
+      "maleEx": 3.5,
+      "femaleQx": 0.160353,
+      "femaleEx": 4.1
+    },
+    {
+      "age": 93,
+      "maleQx": 0.216286,
+      "maleEx": 3.23,
+      "femaleQx": 0.177635,
+      "femaleEx": 3.79
+    },
+    {
+      "age": 94,
+      "maleQx": 0.238799,
+      "maleEx": 2.99,
+      "femaleQx": 0.196502,
+      "femaleEx": 3.5
+    },
+    {
+      "age": 95,
+      "maleQx": 0.262268,
+      "maleEx": 2.77,
+      "femaleQx": 0.216846,
+      "femaleEx": 3.23
+    },
+    {
+      "age": 96,
+      "maleQx": 0.286291,
+      "maleEx": 2.58,
+      "femaleQx": 0.23875,
+      "femaleEx": 2.99
+    },
+    {
+      "age": 97,
+      "maleQx": 0.310944,
+      "maleEx": 2.41,
+      "femaleQx": 0.261359,
+      "femaleEx": 2.77
+    },
+    {
+      "age": 98,
+      "maleQx": 0.332325,
+      "maleEx": 2.27,
+      "femaleQx": 0.283899,
+      "femaleEx": 2.57
+    },
+    {
+      "age": 99,
+      "maleQx": 0.349036,
+      "maleEx": 2.15,
+      "femaleQx": 0.306491,
+      "femaleEx": 2.39
+    },
+    {
+      "age": 100,
+      "maleQx": 0.366568,
+      "maleEx": 2.04,
+      "femaleQx": 0.32968,
+      "femaleEx": 2.23
+    },
+    {
+      "age": 101,
+      "maleQx": 0.38496,
+      "maleEx": 1.93,
+      "femaleQx": 0.353333,
+      "femaleEx": 2.08
+    },
+    {
+      "age": 102,
+      "maleQx": 0.404252,
+      "maleEx": 1.83,
+      "femaleQx": 0.3773,
+      "femaleEx": 1.94
+    },
+    {
+      "age": 103,
+      "maleQx": 0.424488,
+      "maleEx": 1.72,
+      "femaleQx": 0.401416,
+      "femaleEx": 1.82
+    },
+    {
+      "age": 104,
+      "maleQx": 0.445712,
+      "maleEx": 1.63,
+      "femaleQx": 0.425501,
+      "femaleEx": 1.7
+    },
+    {
+      "age": 105,
+      "maleQx": 0.467998,
+      "maleEx": 1.54,
+      "femaleQx": 0.451031,
+      "femaleEx": 1.59
+    },
+    {
+      "age": 106,
+      "maleQx": 0.491398,
+      "maleEx": 1.45,
+      "femaleQx": 0.478092,
+      "femaleEx": 1.48
+    },
+    {
+      "age": 107,
+      "maleQx": 0.515968,
+      "maleEx": 1.36,
+      "femaleQx": 0.506778,
+      "femaleEx": 1.38
+    },
+    {
+      "age": 108,
+      "maleQx": 0.541766,
+      "maleEx": 1.28,
+      "femaleQx": 0.537185,
+      "femaleEx": 1.29
+    },
+    {
+      "age": 109,
+      "maleQx": 0.568854,
+      "maleEx": 1.2,
+      "femaleQx": 0.568854,
+      "femaleEx": 1.2
+    },
+    {
+      "age": 110,
+      "maleQx": 0.597297,
+      "maleEx": 1.13,
+      "femaleQx": 0.597297,
+      "femaleEx": 1.13
+    },
+    {
+      "age": 111,
+      "maleQx": 0.627162,
+      "maleEx": 1.05,
+      "femaleQx": 0.627162,
+      "femaleEx": 1.05
+    },
+    {
+      "age": 112,
+      "maleQx": 0.65852,
+      "maleEx": 0.98,
+      "femaleQx": 0.65852,
+      "femaleEx": 0.98
+    },
+    {
+      "age": 113,
+      "maleQx": 0.691446,
+      "maleEx": 0.92,
+      "femaleQx": 0.691446,
+      "femaleEx": 0.92
+    },
+    {
+      "age": 114,
+      "maleQx": 0.726018,
+      "maleEx": 0.85,
+      "femaleQx": 0.726018,
+      "femaleEx": 0.85
+    },
+    {
+      "age": 115,
+      "maleQx": 0.762319,
+      "maleEx": 0.79,
+      "femaleQx": 0.762319,
+      "femaleEx": 0.79
+    },
+    {
+      "age": 116,
+      "maleQx": 0.800435,
+      "maleEx": 0.74,
+      "femaleQx": 0.800435,
+      "femaleEx": 0.74
+    },
+    {
+      "age": 117,
+      "maleQx": 0.840457,
+      "maleEx": 0.68,
+      "femaleQx": 0.840457,
+      "femaleEx": 0.68
+    },
+    {
+      "age": 118,
+      "maleQx": 0.88248,
+      "maleEx": 0.63,
+      "femaleQx": 0.88248,
+      "femaleEx": 0.63
+    },
+    {
+      "age": 119,
+      "maleQx": 0.926604,
+      "maleEx": 0.58,
+      "femaleQx": 0.926604,
+      "femaleEx": 0.58
+    }
+  ]
+}
