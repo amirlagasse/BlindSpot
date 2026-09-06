@@ -31,6 +31,17 @@ import type {
 /** Bump on any change to how a number is computed. Stored with every result. */
 export const ENGINE_VERSION = '0.1.0';
 
+/**
+ * Below this, a contribution is left out of the ranked fixes.
+ *
+ * Fifteen minutes a year. A factor can legitimately evaluate to zero (the first
+ * daily drink does, because the largest study found no measured excess in that
+ * band) and it stays in `chronic.contributions` where that is a finding. In a
+ * list headed "what you could change" it is a row that means nothing, and a
+ * list padded with rows that mean nothing reads as generated.
+ */
+const RANKED_THRESHOLD_DAYS = 0.01;
+
 const ALL_DOMAINS: Domain[] = [
   'mobility',
   'occupation',
@@ -101,7 +112,7 @@ export function computeRisk(profile: Profile, options: EngineOptions = {}): Engi
       : populationTotalDaysLost(profile, { ...options, factors: factorList });
 
   const ranked = contributions
-    .filter((c) => c.controllable)
+    .filter((c) => c.controllable && Math.abs(c.daysLostPerYear) >= RANKED_THRESHOLD_DAYS)
     .sort((a, b) => b.daysLostPerYear - a.daysLostPerYear);
 
   const domainsCovered = ALL_DOMAINS.filter((d) =>

@@ -93,6 +93,17 @@ export interface RiskContribution {
   controllable: boolean;
   /** The user's annual exposure in the factor's own unit (miles, events, hours, days). */
   exposure: number;
+  /**
+   * The multiplier applied on top of exposure.
+   *
+   * For a chronic factor this is where the INTENSITY lives: exposure is 365.25
+   * days and the modifier is cigarettes a day, or BMI points above the ceiling.
+   * For an acute factor it is usually 1, or a mitigation, or a state road-rate
+   * scaling. Anything asking "what if this were half as much" has to know which
+   * of the two quantities to halve, which is why this is recorded rather than
+   * folded into the amount and lost.
+   */
+  modifier: number;
   /** Micromorts per year. Zero for chronic factors. Never added to `microlives`. */
   micromorts: number;
   /** Microlives lost per year. Zero for acute factors. Never added to `micromorts`. */

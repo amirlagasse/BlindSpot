@@ -63,6 +63,7 @@ export function contribute(
     kind: factor.kind,
     controllable: factor.controllable,
     exposure,
+    modifier,
     micromorts,
     microlives,
     daysLostPerYear: acute
