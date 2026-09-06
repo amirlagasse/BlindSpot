@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
+/*
+ * Blind Spot: the design foundation.
+ *
+ * The brief is an instrument panel, not a horror movie. That rules out the
+ * obvious moves for a product about mortality: no red, no skulls, no countdown.
+ * What is left is the vocabulary of things that measure: hairline rules, tight
+ * grids, tabular figures, a restrained palette where color carries meaning
+ * rather than emphasis.
+ *
+ * Two decisions do most of the work.
+ *
+ * ACUTE AND CHRONIC HAVE THEIR OWN HUES and keep them everywhere: amber for
+ * acute, indigo for chronic. They are incompatible units and the interface says
+ * so before a word of copy does.
+ *
+ * MAGNITUDE IS SHOWN BY LENGTH, NEVER BY ALARM. A large number is a long bar in
+ * the same color as a small one. Nothing turns red as it grows, because the
+ * product's whole argument is that people misjudge risk when it is presented
+ * emotionally.
+ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  /* Ground and surfaces. Cool near-black, the way a lit panel reads at night. */
+  --ground: #0b0c0e;
+  --panel: #121417;
+  --panel-raised: #171a1e;
+
+  /* Rules. Hairlines, low contrast. They organize; they must not draw the eye. */
+  --rule: #23272d;
+  --rule-strong: #333940;
+
+  /* Text. Secondary is light enough to read at 13px, which is the point. */
+  --ink: #e9ebee;
+  --ink-secondary: #a2a9b2;
+  --ink-tertiary: #6e767f;
+
+  /* The two units. Never interchangeable, never blended. */
+  --acute: #d8a054;
+  --acute-dim: #7a5a2f;
+  --chronic: #8e93d8;
+  --chronic-dim: #4a4d76;
+
+  /* Baseline hazard: the part nobody can change. Deliberately colorless. */
+  --baseline: #5b626b;
+
+  /* A gain. Exercise is the only thing in the app that gives days back. */
+  --gain: #6fb49b;
+
+  --focus: #8e93d8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light;
+
+    --ground: #f6f6f4;
+    --panel: #ffffff;
+    --panel-raised: #ffffff;
+
+    --rule: #e0e0dc;
+    --rule-strong: #c8c8c2;
+
+    --ink: #14161a;
+    --ink-secondary: #5a616a;
+    --ink-tertiary: #868d96;
+
+    --acute: #9a6516;
+    --acute-dim: #e2c79b;
+    --chronic: #4c50a6;
+    --chronic-dim: #b6b8e0;
+
+    --baseline: #8d949c;
+    --gain: #2f7d64;
+
+    --focus: #4c50a6;
   }
 }
 
+@theme inline {
+  --color-ground: var(--ground);
+  --color-panel: var(--panel);
+  --color-panel-raised: var(--panel-raised);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-tertiary: var(--ink-tertiary);
+  --color-acute: var(--acute);
+  --color-acute-dim: var(--acute-dim);
+  --color-chronic: var(--chronic);
+  --color-chronic-dim: var(--chronic-dim);
+  --color-baseline: var(--baseline);
+  --color-gain: var(--gain);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-stack), ui-monospace, monospace;
+}
+
+html {
+  background: var(--ground);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  /* Every figure in this app sits in a column with other figures. */
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * A number that is being read as a measurement, not as text. Tighter tracking
+ * and tabular figures so a column of them aligns on the decimal.
+ */
+.figure {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  font-feature-settings: "ss01";
+}
+
+/*
+ * Section labels. Small, spaced, uppercase: the convention for a panel legend.
+ * Kept at 11px minimum with real contrast, never grey-on-grey.
+ */
+.legend {
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+/* A hairline that spans a panel. 1 device pixel wherever the display allows. */
+.rule {
+  border-color: var(--rule);
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* The intake form is long. Nothing should animate while someone is filling it in. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: var(--chronic);
+  color: var(--ground);
 }
