@@ -1,5 +1,65 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "domain": "mobility",
-  "factors": []
+  "factors": [
+    {
+      "id": "mobility.car_day",
+      "label": "Driving, daylight",
+      "domain": "mobility",
+      "kind": "acute",
+      "unit": "per_100_miles",
+      "value": 0.5178,
+      "controllable": true,
+      "source": {
+        "citation": "Deaths from the US DOT Fatality Analysis Reporting System (FARS) 2024, via IIHS Fatality Facts 2024: Yearly snapshot. Vehicle miles from Federal Highway Administration, Highway Statistics 2024, Table VM-1: Annual Vehicle Distance Traveled in Miles and Related Data by Highway Category and Vehicle Type.",
+        "url": "https://www.fhwa.dot.gov/policyinformation/statistics/2024/vm1.cfm",
+        "year": 2024,
+        "confidence": "high"
+      },
+      "notes": "Derived: 22,713 passenger vehicle occupant deaths in 2024 over 2.924 trillion passenger vehicle miles gives 0.777 micromorts per 100 miles overall. Split into day and night using NHTSA's finding that a quarter of travel happens after dark at about three times the daytime rate per mile. The night ratio is from 2005 data applied to 2024 rates, so the split is less certain than the overall figure."
+    },
+    {
+      "id": "mobility.car_night",
+      "label": "Driving, after dark",
+      "domain": "mobility",
+      "kind": "acute",
+      "unit": "per_100_miles",
+      "value": 1.5535,
+      "controllable": true,
+      "source": {
+        "citation": "Varghese C, Shankar U. Passenger Vehicle Occupant Fatalities by Day and Night: A Contrast. NHTSA National Center for Statistics and Analysis, Traffic Safety Facts Research Note DOT HS 810 637, May 2007. States that approximately 25 percent of travel occurs during hours of darkness and that the fatality rate per vehicle mile of travel is about three times higher at night than during the day.",
+        "url": "https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/810637",
+        "year": 2005,
+        "confidence": "medium"
+      },
+      "notes": "Three times the daylight rate, per NHTSA DOT HS 810 637. The underlying overall rate is the 2024 FARS and FHWA figure of 0.777 micromorts per 100 miles."
+    },
+    {
+      "id": "mobility.motorcycle",
+      "label": "Riding a motorcycle",
+      "domain": "mobility",
+      "kind": "acute",
+      "unit": "per_100_miles",
+      "value": 28,
+      "controllable": true,
+      "source": {
+        "citation": "Deaths from the US DOT Fatality Analysis Reporting System (FARS) 2024, via IIHS Fatality Facts 2024: Yearly snapshot. Vehicle miles from Federal Highway Administration, Highway Statistics 2024, Table VM-1: Annual Vehicle Distance Traveled in Miles and Related Data by Highway Category and Vehicle Type.",
+        "url": "https://www.fhwa.dot.gov/policyinformation/statistics/2024/vm1.cfm",
+        "year": 2024,
+        "confidence": "high"
+      },
+      "mitigations": {
+        "helmet": {
+          "multiplier": 0.63,
+          "source": {
+            "citation": "Insurance Institute for Highway Safety, Fatality Facts 2024: Motorcycles and ATVs. States that helmets are about 37 percent effective in preventing motorcycle deaths.",
+            "url": "https://www.iihs.org/research-areas/fatality-statistics/detail/motorcycles-and-atvs",
+            "year": 2024,
+            "confidence": "high"
+          }
+        }
+      },
+      "notes": "Derived: 6,228 motorcyclist deaths in 2024 over 22.2 billion motorcycle miles. That is 36 times the passenger vehicle rate per mile. IIHS separately states the ratio is \"almost 27 times\" for cars specifically; the difference is that this figure's denominator includes light trucks and SUVs. The range is 27 to 36 times."
+    }
+  ]
 }

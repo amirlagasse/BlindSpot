@@ -281,14 +281,14 @@ describe('activity mitigations', () => {
 
 describe('chronic specifics', () => {
   it('credits exercise as days gained, so a contribution can be negative', () => {
-    const r = computeRisk(profile({ habits: { exerciseMinutesPerWeek: 140 } }), opts);
+    const r = computeRisk(profile({ habits: { exerciseMinutesPerWeek: 105 } }), opts);
     expect(r.chronic.totalMicrolives).toBeLessThan(0);
     expect(r.chronic.daysLost).toBeLessThan(0);
   });
 
   it('nets a good habit against a bad one in the headline', () => {
     const both = computeRisk(
-      profile({ habits: { cigarettesPerDay: 1, exerciseMinutesPerWeek: 140 } }),
+      profile({ habits: { cigarettesPerDay: 1, exerciseMinutesPerWeek: 105 } }),
       opts,
     );
     const smokeOnly = computeRisk(profile({ habits: { cigarettesPerDay: 1 } }), opts);
@@ -297,12 +297,12 @@ describe('chronic specifics', () => {
     );
   });
 
-  it('computes excess weight from BMI rather than asking for it', () => {
+  it('computes excess BMI rather than asking the user for it', () => {
     const r = computeRisk(
       profile({ habits: { heightCm: 180, weightKg: 100 } }),
       { factors: [...FIXTURE_FACTORS, {
-        id: 'chronic.bmi_excess_per_5kg',
-        label: 'Excess weight',
+        id: 'chronic.bmi_excess_per_unit',
+        label: 'Excess body mass',
         domain: 'chronic' as const,
         kind: 'chronic' as const,
         unit: 'per_day' as const,
@@ -311,8 +311,9 @@ describe('chronic specifics', () => {
         source: FIXTURE_SOURCE,
       }] },
     );
-    // A BMI of 25 at 180cm is 81kg, so 19kg excess, or 3.8 steps of 5kg.
-    expect(r.chronic.totalMicrolives).toBeCloseTo(3.8 * 365.25, 4);
+    // 100 kg at 1.80 m is a BMI of 30.86, which is 5.86 above the ceiling of 25.
+    const excessBmi = 100 / 1.8 ** 2 - 25;
+    expect(r.chronic.totalMicrolives).toBeCloseTo(excessBmi * 365.25, 4);
   });
 });
 

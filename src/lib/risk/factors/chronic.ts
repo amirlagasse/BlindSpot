@@ -21,11 +21,11 @@ export const CHRONIC_FACTOR_IDS = {
   /** The first drink of the day, which published curves treat differently from the rest. */
   alcoholFirstDrink: 'chronic.alcohol_first_drink',
   alcoholAdditionalDrink: 'chronic.alcohol_additional_drink',
-  /** Per 5 kg over a healthy BMI, per day. */
-  bmiExcessPer5kg: 'chronic.bmi_excess_per_5kg',
-  /** The first 20 minutes of daily exercise, which carries most of the benefit. */
-  exerciseFirst20Min: 'chronic.exercise_first_20_min',
-  exerciseAdditional20Min: 'chronic.exercise_additional_20_min',
+  /** Per 1 kg/m2 of BMI above the healthy ceiling, per day. */
+  bmiExcessPerUnit: 'chronic.bmi_excess_per_unit',
+  /** The first 15 minutes of daily exercise, which carries most of the benefit. */
+  exerciseFirst15Min: 'chronic.exercise_first_15_min',
+  exerciseAdditional15Min: 'chronic.exercise_additional_15_min',
   sleepShort: 'chronic.sleep_short',
   sleepLong: 'chronic.sleep_long',
 } as const;
@@ -33,17 +33,30 @@ export const CHRONIC_FACTOR_IDS = {
 const DAYS_PER_YEAR = 365.25;
 const DAYS_PER_WEEK = 7;
 
-/** Upper end of the healthy BMI band. Excess weight is measured from here. */
+/**
+ * Upper end of the healthy BMI band. Excess is measured from here, matching the
+ * Global BMI Mortality Collaboration's finding that all-cause mortality is
+ * minimal from 20.0 to 25.0 kg/m2 and rises log-linearly above it.
+ */
 const HEALTHY_BMI_CEILING = 25;
 
-/** The published overweight factor is denominated per 5 kg. */
-const KG_PER_EXCESS_STEP = 5;
+/**
+ * The exercise curve's first block, where the return is largest.
+ *
+ * 15 minutes because that is the dose Wen et al. measured: 92 minutes a week,
+ * about 15 a day, against an inactive baseline. Every additional 15 minutes
+ * carries a much smaller further reduction.
+ */
+const EXERCISE_FIRST_BLOCK_MIN = 15;
+const EXERCISE_BLOCK_MIN = 15;
 
-/** The exercise curve's first block, where the return is largest. */
-const EXERCISE_FIRST_BLOCK_MIN = 20;
-const EXERCISE_BLOCK_MIN = 20;
-
-/** Beyond this, published curves flatten and we stop crediting additional minutes. */
+/**
+ * Beyond this we stop crediting additional minutes.
+ *
+ * Wen et al. reported the marginal benefit per additional 15 minutes without
+ * naming an upper bound, and extrapolating a linear credit to a two-hour daily
+ * habit would produce a life-expectancy gain no cohort has measured.
+ */
 const EXERCISE_CREDITED_CEILING_MIN = 60;
 
 const SLEEP_SHORT_BELOW_HOURS = 6;
@@ -75,8 +88,12 @@ export function evaluateChronic(
   }
 
   if (h.alcoholDrinksPerWeek !== undefined && h.alcoholDrinksPerWeek > 0) {
-    // Drinks are reported weekly and the published curve is per drinking day, so
-    // the week is spread across seven days rather than assumed to be one binge.
+    // Drinks are reported weekly and the published thresholds are weekly, so the
+    // week is spread across seven days rather than assumed to be one binge.
+    //
+    // One drink a day is about 98 g of alcohol a week, which lands almost
+    // exactly on the 100 g/week threshold Wood et al. identified as the point of
+    // lowest all-cause mortality. That is why the split below is at one a day.
     const perDay = h.alcoholDrinksPerWeek / DAYS_PER_WEEK;
     const firstDrinkShare = Math.min(perDay, 1);
     const additionalPerDay = Math.max(perDay - 1, 0);
@@ -90,13 +107,13 @@ export function evaluateChronic(
     add(CHRONIC_FACTOR_IDS.alcoholAdditionalDrink, DAYS_PER_YEAR, additionalPerDay);
   }
 
-  const excessKg = excessWeightKg(h);
-  if (excessKg !== undefined && excessKg > 0) {
+  const excessBmi = excessBmiUnits(h);
+  if (excessBmi !== undefined && excessBmi > 0) {
     add(
-      CHRONIC_FACTOR_IDS.bmiExcessPer5kg,
+      CHRONIC_FACTOR_IDS.bmiExcessPerUnit,
       DAYS_PER_YEAR,
-      excessKg / KG_PER_EXCESS_STEP,
-      `About ${excessKg.toFixed(1)} kg above a BMI of ${HEALTHY_BMI_CEILING} at this height.`,
+      excessBmi,
+      `A BMI of ${(bmi(h) as number).toFixed(1)}, which is ${excessBmi.toFixed(1)} above the healthy ceiling of ${HEALTHY_BMI_CEILING}.`,
     );
   }
 
@@ -108,12 +125,12 @@ export function evaluateChronic(
     const firstBlock = Math.min(perDay, EXERCISE_FIRST_BLOCK_MIN) / EXERCISE_FIRST_BLOCK_MIN;
     const additionalBlocks = Math.max(perDay - EXERCISE_FIRST_BLOCK_MIN, 0) / EXERCISE_BLOCK_MIN;
 
-    add(CHRONIC_FACTOR_IDS.exerciseFirst20Min, DAYS_PER_YEAR, firstBlock);
+    add(CHRONIC_FACTOR_IDS.exerciseFirst15Min, DAYS_PER_YEAR, firstBlock);
     add(
-      CHRONIC_FACTOR_IDS.exerciseAdditional20Min,
+      CHRONIC_FACTOR_IDS.exerciseAdditional15Min,
       DAYS_PER_YEAR,
       additionalBlocks,
-      `Credited to ${EXERCISE_CREDITED_CEILING_MIN} minutes a day, beyond which published curves flatten.`,
+      `Credited to ${EXERCISE_CREDITED_CEILING_MIN} minutes a day, beyond which no cohort has measured the marginal gain.`,
     );
   }
 
@@ -133,12 +150,11 @@ export function evaluateChronic(
   return { contributions, skipped };
 }
 
-/** Kilograms above the top of the healthy BMI band. Undefined when height or weight is missing. */
-export function excessWeightKg(h: HabitsInput): number | undefined {
-  if (h.heightCm === undefined || h.weightKg === undefined) return undefined;
-  const heightM = h.heightCm / 100;
-  const healthyCeilingKg = HEALTHY_BMI_CEILING * heightM * heightM;
-  return Math.max(h.weightKg - healthyCeilingKg, 0);
+/** BMI units above the healthy ceiling. Undefined when height or weight is missing. */
+export function excessBmiUnits(h: HabitsInput): number | undefined {
+  const value = bmi(h);
+  if (value === undefined) return undefined;
+  return Math.max(value - HEALTHY_BMI_CEILING, 0);
 }
 
 export function bmi(h: HabitsInput): number | undefined {

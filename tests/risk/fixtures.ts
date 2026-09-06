@@ -73,8 +73,8 @@ export const FIXTURE_FACTORS: RiskFactor[] = [
   }),
   chronicFactor(),
   chronicFactor({
-    id: 'chronic.exercise_first_20_min',
-    label: 'First 20 minutes of daily exercise',
+    id: 'chronic.exercise_first_15_min',
+    label: 'First 15 minutes of daily exercise',
     value: -1,
   }),
   chronicFactor({

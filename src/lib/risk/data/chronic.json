@@ -1,5 +1,102 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "domain": "chronic",
-  "factors": []
+  "factors": [
+    {
+      "id": "chronic.cigarette",
+      "label": "Cigarettes",
+      "domain": "chronic",
+      "kind": "chronic",
+      "unit": "per_day",
+      "value": 0.4211,
+      "controllable": true,
+      "source": {
+        "citation": "Doll R, Peto R, Boreham J, Sutherland I. Mortality in relation to smoking: 50 years observations on male British doctors. BMJ 2004;328:1519. Men who smoked only cigarettes and continued smoking died on average about 10 years younger than lifelong non-smokers.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15213107/",
+        "year": 2004,
+        "confidence": "high"
+      },
+      "notes": "Derived: 10 years of life expectancy spread over a 57 year adult lifetime is 8.42 microlives a day for a smoker, or 12.6 minutes per cigarette at an assumed pack a day. THE PACK-A-DAY DENOMINATOR IS AN ASSUMPTION, not a published figure. Independent estimates put a cigarette at 15 minutes (Spiegelhalter, BMJ 2012) and about 20 minutes (University College London, 2024), so the plausible range is roughly 13 to 20 minutes."
+    },
+    {
+      "id": "chronic.alcohol_first_drink",
+      "label": "The first drink of the day",
+      "domain": "chronic",
+      "kind": "chronic",
+      "unit": "per_day",
+      "value": 0,
+      "controllable": true,
+      "source": {
+        "citation": "Wood AM, Kaptoge S, Butterworth AS, et al. Risk thresholds for alcohol consumption: combined analysis of individual-participant data for 599,912 current drinkers in 83 prospective studies. Lancet 2018;391:1513-23. Minimum all-cause mortality risk was around or below 100 g per week; relative to 0-100 g per week, life expectancy at age 40 was lower by about 6 months at 100-200 g, 1-2 years at 200-350 g, and 4-5 years above 350 g.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29676281/",
+        "year": 2018,
+        "confidence": "high"
+      },
+      "notes": "Zero, not omitted. Wood et al. found the lowest all-cause mortality at or below 100 g of alcohol a week, which is about one US standard drink a day, so no excess is measured in this band. The study covered current drinkers only, so it cannot say whether one drink a day is better or worse than none, and this app does not claim either."
+    },
+    {
+      "id": "chronic.alcohol_additional_drink",
+      "label": "Each drink beyond the first of the day",
+      "domain": "chronic",
+      "kind": "chronic",
+      "unit": "per_day",
+      "value": 0.6602,
+      "controllable": true,
+      "source": {
+        "citation": "Wood AM, Kaptoge S, Butterworth AS, et al. Risk thresholds for alcohol consumption: combined analysis of individual-participant data for 599,912 current drinkers in 83 prospective studies. Lancet 2018;391:1513-23. Minimum all-cause mortality risk was around or below 100 g per week; relative to 0-100 g per week, life expectancy at age 40 was lower by about 6 months at 100-200 g, 1-2 years at 200-350 g, and 4-5 years above 350 g.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29676281/",
+        "year": 2018,
+        "confidence": "high"
+      },
+      "notes": "Derived from the marginal slope between the 100-200 and 200-350 g per week bands: 0.112 years of life expectancy per sustained extra drink a week. Consumption above 350 g a week costs far more per drink than this linear figure implies; heavy drinking is understated here."
+    },
+    {
+      "id": "chronic.bmi_excess_per_unit",
+      "label": "Body mass above a BMI of 25",
+      "domain": "chronic",
+      "kind": "chronic",
+      "unit": "per_day",
+      "value": 0.5401,
+      "controllable": true,
+      "source": {
+        "citation": "Global BMI Mortality Collaboration. Body-mass index and all-cause mortality: individual-participant-data meta-analysis of 239 prospective studies in four continents. Lancet 2016;388:776-86. Hazard ratio per 5 kg/m2 higher BMI above 25 was 1.29 in North America.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27423262/",
+        "year": 2016,
+        "confidence": "high"
+      },
+      "notes": "Derived: a hazard ratio of 1.29 per 5 kg/m2 becomes 3.21 years of life expectancy using a Gompertz slope of 0.0794 per year, itself fitted from the SSA 2023 life table in this repo over ages 40 to 85. The meta-analysis excluded smokers and anyone with pre-existing disease, so this is the association in otherwise healthy people. Below a BMI of 20 mortality also rises; this app does not yet model the underweight side."
+    },
+    {
+      "id": "chronic.exercise_first_15_min",
+      "label": "The first 15 minutes of daily exercise",
+      "domain": "chronic",
+      "kind": "chronic",
+      "unit": "per_day",
+      "value": -2.5263,
+      "controllable": true,
+      "source": {
+        "citation": "Wen CP, Wai JPM, Tsai MK, et al. Minimum amount of physical activity for reduced mortality and extended life expectancy: a prospective cohort study. Lancet 2011;378:1244-53. 92 minutes a week, about 15 a day, gave a 14 percent lower all-cause mortality and a 3 year longer life expectancy than being inactive; every additional 15 minutes a day reduced all-cause mortality by a further 4 percent.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21846575/",
+        "year": 2011,
+        "confidence": "high"
+      },
+      "notes": "Negative because it is life gained. Derived: 3 years of life expectancy over a 57 year adult lifetime. This is the single largest positive factor in the app, and it comes from the smallest dose anyone has measured."
+    },
+    {
+      "id": "chronic.exercise_additional_15_min",
+      "label": "Each additional 15 minutes of daily exercise",
+      "domain": "chronic",
+      "kind": "chronic",
+      "unit": "per_day",
+      "value": -0.433,
+      "controllable": true,
+      "source": {
+        "citation": "Wen CP, Wai JPM, Tsai MK, et al. Minimum amount of physical activity for reduced mortality and extended life expectancy: a prospective cohort study. Lancet 2011;378:1244-53. 92 minutes a week, about 15 a day, gave a 14 percent lower all-cause mortality and a 3 year longer life expectancy than being inactive; every additional 15 minutes a day reduced all-cause mortality by a further 4 percent.",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21846575/",
+        "year": 2011,
+        "confidence": "high"
+      },
+      "notes": "Derived from the further 4 percent reduction in all-cause mortality per additional 15 minutes a day, converted through the same Gompertz slope. About a sixth of the first block's benefit, which is the point: the return falls away sharply after the first quarter hour."
+    }
+  ]
 }

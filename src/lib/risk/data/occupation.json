@@ -1,5 +1,118 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "domain": "occupation",
-  "factors": []
+  "factors": [
+    {
+      "id": "occupation.soc.45-0000",
+      "label": "Farming, fishing and forestry",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 244,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "24.4 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    },
+    {
+      "id": "occupation.soc.53-0000",
+      "label": "Transportation and material moving",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 136,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "13.6 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    },
+    {
+      "id": "occupation.soc.47-0000",
+      "label": "Construction and extraction",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 129,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "12.9 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    },
+    {
+      "id": "occupation.soc.49-0000",
+      "label": "Installation, maintenance and repair",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 90,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "9 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    },
+    {
+      "id": "occupation.soc.33-0000",
+      "label": "Protective service",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 82,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "8.2 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    },
+    {
+      "id": "occupation.soc.37-0000",
+      "label": "Building and grounds cleaning and maintenance",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 71,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "7.1 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    },
+    {
+      "id": "occupation.soc.00-0000",
+      "label": "All workers, average across every occupation",
+      "domain": "occupation",
+      "kind": "acute",
+      "unit": "per_year",
+      "value": 35,
+      "controllable": false,
+      "source": {
+        "citation": "US Bureau of Labor Statistics, National Census of Fatal Occupational Injuries in 2023, USDL-24-2564, released 19 December 2024, Table 4: Fatal work injury rates per 100,000 full-time equivalent workers by selected occupations, 2021-23.",
+        "url": "https://www.bls.gov/news.release/cfoi.t04.htm",
+        "year": 2023,
+        "confidence": "high"
+      },
+      "notes": "3.5 fatal work injuries per 100,000 full-time equivalent workers in 2023. Covers fatal injuries only, not occupational disease. The all-worker rate that year was 3.5."
+    }
+  ]
 }

@@ -1,0 +1,319 @@
+{
+  "version": "1.0.0",
+  "source": {
+    "citation": "Insurance Institute for Highway Safety, Fatality Facts 2024: State by state. Motor vehicle crash deaths from the US DOT Fatality Analysis Reporting System (FARS) 2024, normalized by Federal Highway Administration vehicle miles traveled.",
+    "url": "https://www.iihs.org/topics/fatality-statistics/detail/state-by-state",
+    "year": 2024,
+    "confidence": "high"
+  },
+  "nationalPerHundredMillionVMT": 1.19,
+  "note": "All road users, not passenger vehicle occupants alone. Used as a RELATIVE multiplier against the national figure, so the road-user mix cancels out to first order. The spread is about 3x, from 0.59 in Massachusetts to 1.81 in Mississippi.",
+  "states": [
+    {
+      "state": "AL",
+      "name": "Alabama",
+      "deaths": 962,
+      "perHundredMillionVMT": 1.32
+    },
+    {
+      "state": "AK",
+      "name": "Alaska",
+      "deaths": 70,
+      "perHundredMillionVMT": 1.27
+    },
+    {
+      "state": "AZ",
+      "name": "Arizona",
+      "deaths": 1229,
+      "perHundredMillionVMT": 1.74
+    },
+    {
+      "state": "AR",
+      "name": "Arkansas",
+      "deaths": 603,
+      "perHundredMillionVMT": 1.53
+    },
+    {
+      "state": "CA",
+      "name": "California",
+      "deaths": 3876,
+      "perHundredMillionVMT": 1.19
+    },
+    {
+      "state": "CO",
+      "name": "Colorado",
+      "deaths": 689,
+      "perHundredMillionVMT": 1.25
+    },
+    {
+      "state": "CT",
+      "name": "Connecticut",
+      "deaths": 310,
+      "perHundredMillionVMT": 1.0
+    },
+    {
+      "state": "DE",
+      "name": "Delaware",
+      "deaths": 126,
+      "perHundredMillionVMT": 1.27
+    },
+    {
+      "state": "DC",
+      "name": "District of Columbia",
+      "deaths": 47,
+      "perHundredMillionVMT": 1.33
+    },
+    {
+      "state": "FL",
+      "name": "Florida",
+      "deaths": 3138,
+      "perHundredMillionVMT": 1.26
+    },
+    {
+      "state": "GA",
+      "name": "Georgia",
+      "deaths": 1403,
+      "perHundredMillionVMT": 1.15
+    },
+    {
+      "state": "HI",
+      "name": "Hawaii",
+      "deaths": 102,
+      "perHundredMillionVMT": 0.96
+    },
+    {
+      "state": "ID",
+      "name": "Idaho",
+      "deaths": 238,
+      "perHundredMillionVMT": 1.19
+    },
+    {
+      "state": "IL",
+      "name": "Illinois",
+      "deaths": 1177,
+      "perHundredMillionVMT": 1.13
+    },
+    {
+      "state": "IN",
+      "name": "Indiana",
+      "deaths": 832,
+      "perHundredMillionVMT": 0.94
+    },
+    {
+      "state": "IA",
+      "name": "Iowa",
+      "deaths": 356,
+      "perHundredMillionVMT": 1.05
+    },
+    {
+      "state": "KS",
+      "name": "Kansas",
+      "deaths": 339,
+      "perHundredMillionVMT": 1.07
+    },
+    {
+      "state": "KY",
+      "name": "Kentucky",
+      "deaths": 707,
+      "perHundredMillionVMT": 1.44
+    },
+    {
+      "state": "LA",
+      "name": "Louisiana",
+      "deaths": 752,
+      "perHundredMillionVMT": 1.36
+    },
+    {
+      "state": "ME",
+      "name": "Maine",
+      "deaths": 177,
+      "perHundredMillionVMT": 1.17
+    },
+    {
+      "state": "MD",
+      "name": "Maryland",
+      "deaths": 578,
+      "perHundredMillionVMT": 1.01
+    },
+    {
+      "state": "MA",
+      "name": "Massachusetts",
+      "deaths": 363,
+      "perHundredMillionVMT": 0.59
+    },
+    {
+      "state": "MI",
+      "name": "Michigan",
+      "deaths": 1098,
+      "perHundredMillionVMT": 1.1
+    },
+    {
+      "state": "MN",
+      "name": "Minnesota",
+      "deaths": 477,
+      "perHundredMillionVMT": 0.81
+    },
+    {
+      "state": "MS",
+      "name": "Mississippi",
+      "deaths": 753,
+      "perHundredMillionVMT": 1.81
+    },
+    {
+      "state": "MO",
+      "name": "Missouri",
+      "deaths": 955,
+      "perHundredMillionVMT": 1.17
+    },
+    {
+      "state": "MT",
+      "name": "Montana",
+      "deaths": 206,
+      "perHundredMillionVMT": 1.49
+    },
+    {
+      "state": "NE",
+      "name": "Nebraska",
+      "deaths": 251,
+      "perHundredMillionVMT": 1.15
+    },
+    {
+      "state": "NV",
+      "name": "Nevada",
+      "deaths": 417,
+      "perHundredMillionVMT": 1.47
+    },
+    {
+      "state": "NH",
+      "name": "New Hampshire",
+      "deaths": 133,
+      "perHundredMillionVMT": 0.96
+    },
+    {
+      "state": "NJ",
+      "name": "New Jersey",
+      "deaths": 670,
+      "perHundredMillionVMT": 0.84
+    },
+    {
+      "state": "NM",
+      "name": "New Mexico",
+      "deaths": 409,
+      "perHundredMillionVMT": 1.43
+    },
+    {
+      "state": "NY",
+      "name": "New York",
+      "deaths": 1101,
+      "perHundredMillionVMT": 0.91
+    },
+    {
+      "state": "NC",
+      "name": "North Carolina",
+      "deaths": 1619,
+      "perHundredMillionVMT": 1.24
+    },
+    {
+      "state": "ND",
+      "name": "North Dakota",
+      "deaths": 90,
+      "perHundredMillionVMT": 0.9
+    },
+    {
+      "state": "OH",
+      "name": "Ohio",
+      "deaths": 1157,
+      "perHundredMillionVMT": 1.0
+    },
+    {
+      "state": "OK",
+      "name": "Oklahoma",
+      "deaths": 645,
+      "perHundredMillionVMT": 1.39
+    },
+    {
+      "state": "OR",
+      "name": "Oregon",
+      "deaths": 538,
+      "perHundredMillionVMT": 1.44
+    },
+    {
+      "state": "PA",
+      "name": "Pennsylvania",
+      "deaths": 1127,
+      "perHundredMillionVMT": 1.18
+    },
+    {
+      "state": "RI",
+      "name": "Rhode Island",
+      "deaths": 52,
+      "perHundredMillionVMT": 0.68
+    },
+    {
+      "state": "SC",
+      "name": "South Carolina",
+      "deaths": 1038,
+      "perHundredMillionVMT": 1.67
+    },
+    {
+      "state": "SD",
+      "name": "South Dakota",
+      "deaths": 146,
+      "perHundredMillionVMT": 1.4
+    },
+    {
+      "state": "TN",
+      "name": "Tennessee",
+      "deaths": 1197,
+      "perHundredMillionVMT": 1.52
+    },
+    {
+      "state": "TX",
+      "name": "Texas",
+      "deaths": 4160,
+      "perHundredMillionVMT": 1.35
+    },
+    {
+      "state": "UT",
+      "name": "Utah",
+      "deaths": 277,
+      "perHundredMillionVMT": 0.77
+    },
+    {
+      "state": "VT",
+      "name": "Vermont",
+      "deaths": 59,
+      "perHundredMillionVMT": 0.82
+    },
+    {
+      "state": "VA",
+      "name": "Virginia",
+      "deaths": 917,
+      "perHundredMillionVMT": 1.04
+    },
+    {
+      "state": "WA",
+      "name": "Washington",
+      "deaths": 730,
+      "perHundredMillionVMT": 1.21
+    },
+    {
+      "state": "WV",
+      "name": "West Virginia",
+      "deaths": 256,
+      "perHundredMillionVMT": 1.49
+    },
+    {
+      "state": "WI",
+      "name": "Wisconsin",
+      "deaths": 595,
+      "perHundredMillionVMT": 0.86
+    },
+    {
+      "state": "WY",
+      "name": "Wyoming",
+      "deaths": 107,
+      "perHundredMillionVMT": 1.1
+    }
+  ]
+}
