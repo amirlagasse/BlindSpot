@@ -8,6 +8,6 @@ export default defineConfig({
   test: {
     include: ['tests/**/*.test.ts'],
     environment: 'node',
-    coverage: { provider: 'v8', include: ['src/lib/risk/**'] },
+    coverage: { provider: 'v8', include: ['src/lib/risk/**', 'src/lib/providers/**'] },
   },
 });
