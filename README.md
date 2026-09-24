@@ -29,6 +29,18 @@ npm run dev          # http://localhost:3000
 | `npm run typecheck` | `next typegen` then `tsc --noEmit` |
 | `npm run lint` | ESLint |
 
+### Setup (Windows)
+
+```powershell
+winget install OpenJS.NodeJS.LTS      # once, if node is not on PATH
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+npm run dev
+```
+
+`setup.ps1` runs `npm ci` against `package-lock.json`, which pulls the win32
+builds of the native packages, then runs the test suite. Do not copy
+`node_modules` or `.next` from a Mac; both hold macOS binaries.
+
 No environment variables are needed to run it. `.env.example` lists the ones
 that will be, once Supabase is provisioned.
 
